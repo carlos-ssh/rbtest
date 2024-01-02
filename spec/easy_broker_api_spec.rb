@@ -15,5 +15,13 @@ RSpec.describe EasyBrokerAPI do
       response = EasyBrokerAPI.get_properties(api_key)
       expect(response).to be_nil
     end
+
+    it 'returns only property titles' do
+      api_key = 'l7u502p8v46ba3ppgvj5y2aad50lb9'
+      response = EasyBrokerAPI.get_properties(api_key)
+      properties = response
+
+      expect(properties).to be_an(Array)
+    end
   end
 end
