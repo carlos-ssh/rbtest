@@ -9,5 +9,11 @@ RSpec.describe EasyBrokerAPI do
 
       expect(response).to be_an(Array)
     end
+
+    it 'handles authentication errors' do
+      api_key = 'invalid_api_key'
+      response = EasyBrokerAPI.get_properties(api_key)
+      expect(response).to be_nil
+    end
   end
 end
