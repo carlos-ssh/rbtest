@@ -16,7 +16,7 @@ RSpec.describe EasyBrokerAPI do
       expect(response).to be_nil
     end
 
-    it 'returns only property titles' do
+    it 'returns properties in an array' do
       api_key = 'l7u502p8v46ba3ppgvj5y2aad50lb9'
       response = EasyBrokerAPI.get_properties(api_key)
       properties = response
